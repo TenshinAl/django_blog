@@ -25,9 +25,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '+q&d*ojjxp4o-+k_7kthx!nvss1p85$#a_04a!l_&oct_fup%w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+# 开发是最好设置true
+# DEBUG = True
+# ALLOWED_HOSTS = []
+DEBUG = False
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', 'xxx.xxx']
 
 
 # Application definition
@@ -125,11 +127,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-
 STATIC_URL = '/static/'
+# 静态文件目标
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'blog/static'),
 ]
+# 静态文件夹root位置，'static'文件夹下
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 """
 全文搜索配置
