@@ -53,14 +53,16 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="cl-effect-11"><a href="{% url 'blog:index' %}" data-hover="首页">首页</a></li>
-                            <li class="cl-effect-11"><a href="full-width.html" data-hover="博客">博客</a></li>
-                            <li class="cl-effect-11"><a href="about.html" data-hover="关于">关于</a></li>
-                            <li class="cl-effect-11"><a href="contact.html" data-hover="联系">联系</a></li>
+                            <li class="cl-effect-11"><a href="{% url 'blog:about' %}" data-hover="关于">关于</a></li>
+                            <li class="cl-effect-11"><a href="{% url 'blog:collection' %}" data-hover="收藏">收藏</a></li>
+                            <li class="cl-effect-11">
+                                <a href="http://www.theuselessweb.com/" target="_blank" data-hover="摸鱼">摸鱼</a>
+                            </li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </nav>
                 <div id="header-search-box">
-                    <a id="search-menu" href="javascript:void(0);" >
+                    <a id="search-menu" href="javascript:void(0);" title="点击开始搜索">
                         <span id="search-icon" class="ion-ios-search-strong"></span>
                     </a>
                     <div id="search-form" class="search-form" >
@@ -84,6 +86,10 @@
                 {% block main %}
                 {% endblock main %}
             </main>
+{#            <main class="col-md-12">#}
+{#                {% block about %}#}
+{#                {% endblock about %}#}
+{#            </main>#}
             <aside class="col-md-4">
                 {% block toc %}
                 {% endblock toc %}
@@ -199,9 +205,9 @@
     <nav>
         <ul>
             <li><a href="{% url 'blog:index' %}">首页</a></li>
-            <li><a href="full-width.html">博客</a></li>
-            <li><a href="about.html">关于</a></li>
-            <li><a href="contact.html">联系</a></li>
+            <li><a href="{% url 'blog:about' %}">关于</a></li>
+            <li><a href="{% url 'blog:collection' %}">收藏</a></li>
+            <li><a href="http://www.theuselessweb.com/" target="_blank" >摸鱼</a></li>
         </ul>
     </nav>
 </div>

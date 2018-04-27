@@ -60,6 +60,22 @@ from comments.forms import CommentForm
 #     post_list = Post.objects.filter(category=cate)
 #     return render(request, 'blog/index.html', context={"post_list": post_list})
 
+# 关于
+def aboutpage(request):
+    return render(request, 'blog/about.html')
+
+
+# 收藏
+def collection(request):
+    return render(request, 'blog/collection.html')
+
+
+"""
+
+以.下.为.主.要.类.视.图
+
+"""
+
 
 class IndexView(ListView):
     """

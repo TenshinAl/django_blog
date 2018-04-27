@@ -37,7 +37,14 @@
                 </div>
             </article>
         {% empty %}
-            <div class="no-post">没有搜索到你想要的结果</div>
+            <div class="no-post">
+                <br>
+                <h3 style="text-align: center;">没有搜索到关键词内容，试试换个姿势？</h3>
+                <br><br>
+                <img class="img-responsive"
+                     src="http://ww1.sinaimg.cn/large/8512ee6bly1fqrcelxbs7g206t041atb.gif"
+                     alt="快去再搜一遍" width="100%">
+            </div>
         {% endfor %}
         {% if page.has_previous or page.has_next %}
             <div>
