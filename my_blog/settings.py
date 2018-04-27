@@ -26,10 +26,10 @@ SECRET_KEY = '+q&d*ojjxp4o-+k_7kthx!nvss1p85$#a_04a!l_&oct_fup%w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # 开发是最好设置true
-# DEBUG = True
-# ALLOWED_HOSTS = []
-DEBUG = False
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', 'xxx.xxx']
+DEBUG = True
+ALLOWED_HOSTS = []
+# DEBUG = False
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', 'xxx.xxx']
 
 
 # Application definition
